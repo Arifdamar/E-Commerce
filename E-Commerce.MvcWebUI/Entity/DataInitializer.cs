@@ -6,7 +6,7 @@ using System.Web;
 
 namespace E_Commerce.MvcWebUI.Entity
 {
-    public class DataInitializer : DropCreateDatabaseIfModelChanges<DataContext>
+    public class DataInitializer:DropCreateDatabaseIfModelChanges<DataContext>
     {
         protected override void Seed(DataContext context)
         {
@@ -35,7 +35,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 346.00,
                     Stock = 65,
                     IsApproved = true,
-                    IsHome = true,
+                    IsHome= true,
                     CategoryId = 1
 
                 },
@@ -46,7 +46,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 72,
                     Stock = 105,
                     IsApproved = false,
-                    IsHome = true,
+                    IsHome= false,
                     CategoryId = 1
 
                 },
@@ -57,7 +57,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 749.99,
                     Stock = 340,
                     IsApproved = true,
-                    IsHome = true,
+                    IsHome= true,
                     CategoryId = 2
 
                 },
@@ -68,7 +68,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 799.99,
                     Stock = 300,
                     IsApproved = false,
-                    IsHome = true,
+                    IsHome= true,
                     CategoryId = 2
 
                 },
@@ -79,7 +79,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 79.99,
                     Stock = 84,
                     IsApproved = true,
-                    IsHome = false,
+                    IsHome= true,
                     CategoryId = 3
 
                 },
@@ -90,7 +90,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 318.95,
                     Stock = 138,
                     IsApproved = true,
-                    IsHome = true,
+                    IsHome= true,
                     CategoryId = 3
 
                 },
@@ -101,7 +101,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 749.99,
                     Stock = 2400,
                     IsApproved = true,
-                    IsHome = true,
+                    IsHome= true,
                     CategoryId = 4
 
                 },
@@ -112,7 +112,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 307.43,
                     Stock = 3800,
                     IsApproved = true,
-                    IsHome = true,
+                    IsHome= true,
                     CategoryId = 4
 
                 },
@@ -123,7 +123,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 181.48,
                     Stock = 1500,
                     IsApproved = false,
-                    IsHome = false,
+                    IsHome= false,
                     CategoryId = 4
 
                 },
@@ -134,7 +134,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 229.99,
                     Stock = 124,
                     IsApproved = true,
-                    IsHome = true,
+                    IsHome= false,
                     CategoryId = 5
 
                 },
@@ -145,7 +145,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 186.99,
                     Stock = 146,
                     IsApproved = true,
-                    IsHome = true,
+                    IsHome= true,
                     CategoryId = 5
 
                 }
