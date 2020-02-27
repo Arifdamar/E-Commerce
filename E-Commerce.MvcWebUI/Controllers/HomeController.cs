@@ -3,25 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using E_Commerce.MvcWebUI.Entity;
 
 namespace E_Commerce.MvcWebUI.Controllers
 {
     public class HomeController : Controller
     {
+        DataContext _context = new DataContext();
+
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            return View(_context.Products.Where(i=>i.IsHome && i.IsApproved).ToList());
         }
 
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
-            return View();
+            return View(_context.Products.FirstOrDefault(i => i.Id == id));
         }
 
         public ActionResult List()
         {
-            return View();
+            return View(_context.Products.Where(i => i.IsApproved).ToList());
         }
     }
 }
