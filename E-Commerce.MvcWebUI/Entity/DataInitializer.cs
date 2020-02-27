@@ -6,7 +6,7 @@ using System.Web;
 
 namespace E_Commerce.MvcWebUI.Entity
 {
-    public class DataInitializer:DropCreateDatabaseIfModelChanges<DataContext>
+    public class DataInitializer : DropCreateDatabaseIfModelChanges<DataContext>
     {
         protected override void Seed(DataContext context)
         {
@@ -35,6 +35,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 346.00,
                     Stock = 65,
                     IsApproved = true,
+                    IsHome = true,
                     CategoryId = 1
 
                 },
@@ -45,6 +46,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 72,
                     Stock = 105,
                     IsApproved = false,
+                    IsHome = true,
                     CategoryId = 1
 
                 },
@@ -55,6 +57,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 749.99,
                     Stock = 340,
                     IsApproved = true,
+                    IsHome = true,
                     CategoryId = 2
 
                 },
@@ -65,37 +68,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 799.99,
                     Stock = 300,
                     IsApproved = false,
+                    IsHome = true,
                     CategoryId = 2
-
-                },
-                new Product()
-                {
-                    Name = "Samsung Galaxy S10 Factory Unlocked Phone with 128GB (U.S. Warranty), Prism Blue",
-                    Description = "Cinematic display\r\nA nearly frameless Cinematic Infinity Display for more detail and clarity, more immersive and uninterrupted content, in a slim, balanced form.\r\n\r\nA camera that sees what you see\r\nPro-grade Camera effortlessly captures epic, pro-quality images of the world as you see it.\r\n\r\nFirst-touch unlock\r\nThe in-display sensor opens seamlessly with one hand in almost any light, rain or shine. This next-generation Ultrasonic Fingerprint ID keeps your phone and data secure using sound waves to detect the unique peaks and valleys of your fingertip in three dimensions.",
-                    Price = 749.99,
-                    Stock = 2400,
-                    IsApproved = true,
-                    CategoryId = 4
-
-                },
-                new Product()
-                {
-                    Name = "Xiaomi Mi 9T (128GB, 6GB RAM) 6.39\" AMOLED FHD + Full Screen Display, 48MP Triple Camera, Global 4G LTE Dual SIM GSM Factory Unlocked (Carbon Black)",
-                    Description = "Advanced performance.\r\nEquipped with the Qualcomm Snapdragon 730 processor with 8nm process technology, CPU single-core performance is improved by 35%, and power consumption is reduced by 10%. In addition, the AI algorithm improves processor efficiency by up to 2.6 times. Whether gaming or snapping photos, this performance won't let you down.\r\n\r\n4000mAh high-capacity battery and 18W fast charger.\r\nUse all day and stay charged with a 4000mAh battery, then revive in flash with the 18W charger.\r\n\r\nAI triple camera. \r\nWith a Sony 48MP ultra high-resolution wide camera + 8MP telephoto camera + 13MP ultra-wide-angle camera, you can take any shot with ease. Seamlessly zoom in from 0.6x to 10x and discover your true photography potential.\r\n\r\n20MP selfie camera.\r\nNow with panorama selfies, everyone can join in. Have everyone gather around - there's no need for a selfie stick! Simply turn the phone from side to side to capture the whole group.\r\n\r\nBreaking boundaries for an unlimited view.\r\nThe 6.39\" AMOLED display give you a stunning visual experience every time you unlock your phone. In environments with intense light, slide to enable bright mode for a screen that is 39% brighter than normal.\r\n\r\nFierey dynamic rear finish.\r\nThe back of the Mi 9T is graceful and contemplative until th",
-                    Price = 307.43,
-                    Stock = 3800,
-                    IsApproved = true,
-                    CategoryId = 4
-
-                },
-                new Product()
-                {
-                    Name = "Xiaomi Redmi Note 8 6.3\" 64GB 4GB RAM (GSM Only, No CDMA) Internationa Version - No Warranty (Neptune Blue)",
-                    Description = "International Model - No Warranty in US. Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost. - FCC ID: 2AFZZG7G\r\n\r\n",
-                    Price = 181.48,
-                    Stock = 1500,
-                    IsApproved = false,
-                    CategoryId = 4
 
                 },
                 new Product()
@@ -105,6 +79,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 79.99,
                     Stock = 84,
                     IsApproved = true,
+                    IsHome = false,
                     CategoryId = 3
 
                 },
@@ -115,7 +90,41 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 318.95,
                     Stock = 138,
                     IsApproved = true,
+                    IsHome = true,
                     CategoryId = 3
+
+                },
+                new Product()
+                {
+                    Name = "Samsung Galaxy S10 Factory Unlocked Phone with 128GB (U.S. Warranty), Prism Blue",
+                    Description = "Cinematic display\r\nA nearly frameless Cinematic Infinity Display for more detail and clarity, more immersive and uninterrupted content, in a slim, balanced form.\r\n\r\nA camera that sees what you see\r\nPro-grade Camera effortlessly captures epic, pro-quality images of the world as you see it.\r\n\r\nFirst-touch unlock\r\nThe in-display sensor opens seamlessly with one hand in almost any light, rain or shine. This next-generation Ultrasonic Fingerprint ID keeps your phone and data secure using sound waves to detect the unique peaks and valleys of your fingertip in three dimensions.",
+                    Price = 749.99,
+                    Stock = 2400,
+                    IsApproved = true,
+                    IsHome = true,
+                    CategoryId = 4
+
+                },
+                new Product()
+                {
+                    Name = "Xiaomi Mi 9T (128GB, 6GB RAM) 6.39\" AMOLED FHD + Full Screen Display, 48MP Triple Camera, Global 4G LTE Dual SIM GSM Factory Unlocked (Carbon Black)",
+                    Description = "Advanced performance.\r\nEquipped with the Qualcomm Snapdragon 730 processor with 8nm process technology, CPU single-core performance is improved by 35%, and power consumption is reduced by 10%. In addition, the AI algorithm improves processor efficiency by up to 2.6 times. Whether gaming or snapping photos, this performance won't let you down.\r\n\r\n4000mAh high-capacity battery and 18W fast charger.\r\nUse all day and stay charged with a 4000mAh battery, then revive in flash with the 18W charger.\r\n\r\nAI triple camera. \r\nWith a Sony 48MP ultra high-resolution wide camera + 8MP telephoto camera + 13MP ultra-wide-angle camera, you can take any shot with ease. Seamlessly zoom in from 0.6x to 10x and discover your true photography potential.\r\n\r\n20MP selfie camera.\r\nNow with panorama selfies, everyone can join in. Have everyone gather around - there's no need for a selfie stick! Simply turn the phone from side to side to capture the whole group.\r\n\r\nBreaking boundaries for an unlimited view.\r\nThe 6.39\" AMOLED display give you a stunning visual experience every time you unlock your phone. In environments with intense light, slide to enable bright mode for a screen that is 39% brighter than normal.\r\n\r\nFierey dynamic rear finish.\r\nThe back of the Mi 9T is graceful and contemplative until th",
+                    Price = 307.43,
+                    Stock = 3800,
+                    IsApproved = true,
+                    IsHome = true,
+                    CategoryId = 4
+
+                },
+                new Product()
+                {
+                    Name = "Xiaomi Redmi Note 8 6.3\" 64GB 4GB RAM (GSM Only, No CDMA) Internationa Version - No Warranty (Neptune Blue)",
+                    Description = "International Model - No Warranty in US. Compatible with Most GSM Carriers like T-Mobile, AT&T, MetroPCS, etc. Will NOT work with CDMA Carriers Such as Verizon, Sprint, Boost. - FCC ID: 2AFZZG7G\r\n\r\n",
+                    Price = 181.48,
+                    Stock = 1500,
+                    IsApproved = false,
+                    IsHome = false,
+                    CategoryId = 4
 
                 },
                 new Product()
@@ -125,6 +134,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 229.99,
                     Stock = 124,
                     IsApproved = true,
+                    IsHome = true,
                     CategoryId = 5
 
                 },
@@ -135,6 +145,7 @@ namespace E_Commerce.MvcWebUI.Entity
                     Price = 186.99,
                     Stock = 146,
                     IsApproved = true,
+                    IsHome = true,
                     CategoryId = 5
 
                 }
