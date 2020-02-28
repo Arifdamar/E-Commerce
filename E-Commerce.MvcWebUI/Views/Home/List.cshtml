@@ -1,42 +1,31 @@
-﻿@using E_Commerce.MvcWebUI.Entity;
-@model IEnumerable<Product>
+﻿@using E_Commerce.MvcWebUI.Models
+@model IEnumerable<ProductModel>
 @{
     ViewBag.Title = "List";
 }
+<div class="mx-5 my-3">
+    <div class="row">
+        <div class="col-md-3">
+            @Html.Action("_GetCategories", "Home")
+        </div>
 
-<div class="row">
+        <div class="col-md-9">
 
-    <div class="col-md-3">
-        <ul class="list-group">
-            <li class="list-group-item active">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-    </div>
-
-    <div class="col-md-9">
-        
-        <div class="row">
-            @foreach (var product in Model)
+            @if (Model.Count() == 0)
             {
-                <div class="col-md-6 mb-3">
-                    <div class="card">
-                        <img class="card-img-top" src="holder.js/100px160/" alt="@product.Name">
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="/Home/Details/@product.Id">@product.Name</a>
-                            </h4>
-                            <p class="card-text">@(product.Description.Length>300?product.Description.Substring(0,300)+"...":product.Description)</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">$@product.Price</small>
-                        </div>
-                    </div>
+                <div class="alert alert-warning" role="alert">
+                    <i class="fas fa-smile fa-5x"></i>
+                    Wow, Such Empty!
                 </div>
             }
-    
+            else
+            {
+                <div class="alert alert-info" role="alert">
+                    @(Model.Count() == 1 ? Model.Count() + " product found." : Model.Count() + " products found.")
+                </div>
+            }
+
+            @Html.Partial("_ProductList", Model)
         </div>
     </div>
 </div>
