@@ -36,7 +36,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 65,
                     IsApproved = true,
                     IsHome= true,
-                    CategoryId = 1
+                    CategoryId = 1,
+                    Image = "1.jpg"
 
                 },
                 new Product()
@@ -47,7 +48,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 105,
                     IsApproved = false,
                     IsHome= false,
-                    CategoryId = 1
+                    CategoryId = 1,
+                    Image = "2.jpg"
 
                 },
                 new Product()
@@ -58,7 +60,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 340,
                     IsApproved = true,
                     IsHome= true,
-                    CategoryId = 2
+                    CategoryId = 2,
+                    Image = "3.jpg"
 
                 },
                 new Product()
@@ -69,7 +72,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 300,
                     IsApproved = false,
                     IsHome= true,
-                    CategoryId = 2
+                    CategoryId = 2,
+                    Image = "4.jpg"
 
                 },
                 new Product()
@@ -80,7 +84,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 84,
                     IsApproved = true,
                     IsHome= true,
-                    CategoryId = 3
+                    CategoryId = 3,
+                    Image = "5.jpg"
 
                 },
                 new Product()
@@ -91,7 +96,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 138,
                     IsApproved = true,
                     IsHome= true,
-                    CategoryId = 3
+                    CategoryId = 3,
+                    Image = "6.jpg"
 
                 },
                 new Product()
@@ -102,7 +108,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 2400,
                     IsApproved = true,
                     IsHome= true,
-                    CategoryId = 4
+                    CategoryId = 4,
+                    Image = "7.jpg"
 
                 },
                 new Product()
@@ -113,7 +120,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 3800,
                     IsApproved = true,
                     IsHome= true,
-                    CategoryId = 4
+                    CategoryId = 4,
+                    Image = "8.jpg"
 
                 },
                 new Product()
@@ -124,7 +132,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 1500,
                     IsApproved = false,
                     IsHome= false,
-                    CategoryId = 4
+                    CategoryId = 4,
+                    Image = "9.jpg"
 
                 },
                 new Product()
@@ -135,7 +144,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 124,
                     IsApproved = true,
                     IsHome= false,
-                    CategoryId = 5
+                    CategoryId = 5,
+                    Image = "10.jpg"
 
                 },
                 new Product()
@@ -146,7 +156,8 @@ namespace E_Commerce.MvcWebUI.Entity
                     Stock = 146,
                     IsApproved = true,
                     IsHome= true,
-                    CategoryId = 5
+                    CategoryId = 5,
+                    Image = "11.jpg"
 
                 }
             };
