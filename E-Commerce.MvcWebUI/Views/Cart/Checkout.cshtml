@@ -1,0 +1,113 @@
+﻿@model E_Commerce.MvcWebUI.Models.ShippingDetails
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<style>
+    .field-validation-error {
+        color: #f00;
+    }
+
+    .field-validation-valid {
+        display: none;
+    }
+
+    .input-validation-error {
+        border: 1px solid #f00;
+        background-color: #fee;
+    }
+
+    .validation-summary-errors {
+        font-weight: bold;
+        color: #f00;
+    }
+
+    .validation-summary-valid {
+        display: none;
+    }
+</style>
+
+<div class="container">
+
+    @if (Request.IsAuthenticated)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Order Informations</h2>
+                <hr />
+
+                @using (Html.BeginForm())
+                {
+                    @Html.ValidationSummary()
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Full Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(i => i.UserName, new { Value = User.Identity.Name, @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Address Title</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(i => i.AddressTitle, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Address</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(i => i.Address, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">City</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(i => i.City, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">District</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(i => i.District, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Street</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(i => i.Street, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Zip Code</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(i => i.ZipCode, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+
+    }
+    else
+    {
+        <h2>Please <a href="~/Account/Login">Login</a> or <a href="~/Account/Register">Register</a></h2>
+    }
+
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
