@@ -11,10 +11,10 @@ namespace E_Commerce.MvcWebUI.Entity
         public string OrderNumber { get; set; }
         public double Total { get; set; }
         public DateTime OrderDate { get; set; }
+        public EnumOrderState OrderState { get; set; }
 
         public virtual List<OrderLine> OrderLines { get; set; }
 
-        
         public string UserName { get; set; }
         public string AddressTitle { get; set; }
         public string Address { get; set; }
@@ -34,6 +34,6 @@ namespace E_Commerce.MvcWebUI.Entity
         public double Price { get; set; }
 
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
