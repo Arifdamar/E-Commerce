@@ -41,9 +41,9 @@
                     @Html.ValidationSummary()
 
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Full Name</label>
+                        <label class="col-sm-2 col-form-label">User Name</label>
                         <div class="col-sm-10">
-                            @Html.TextBoxFor(i => i.UserName, new { Value = User.Identity.Name, @class = "form-control" })
+                            <h6 style="margin-top:8px;"><span class="badge badge-info">@User.Identity.Name</span></h6>
                         </div>
                     </div>
 
