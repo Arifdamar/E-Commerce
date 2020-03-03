@@ -8,7 +8,6 @@ namespace E_Commerce.MvcWebUI.Models
 {
     public class ShippingDetails
     {
-        [Required(ErrorMessage = "Please enter the name")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Please enter the title")]
