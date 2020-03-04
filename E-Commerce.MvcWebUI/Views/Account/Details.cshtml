@@ -16,6 +16,10 @@
                     {
                         <span class="badge badge-warning">@(Model.OrderState)</span>
                     }
+                    else if (Model.OrderState == EnumOrderState.EnRoute)
+                    {
+                        <span class="badge badge-info">@(Model.OrderState)</span>
+                    }
                     else if (Model.OrderState == EnumOrderState.Completed)
                     {
                         <span class="badge badge-success">@(Model.OrderState)</span>
